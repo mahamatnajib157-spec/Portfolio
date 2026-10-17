@@ -1,0 +1,605 @@
+/* ==================================================
+   COULEURS DU SITE
+================================================== */
+
+:root {
+    --fond-page: #f5f2e9;
+    --fond-entete: #132b3a;
+    --fond-accueil: #132b3a;
+    --fond-services: #e8eae2;
+    --fond-contact: #132b3a;
+    --fond-pied: #0d202c;
+
+    --fond-formation: #e6dcc7;
+    --fond-experiences: #132b3a;
+    --fond-competences: #dfe7df;
+    --fond-interets: #ece9e1;
+    --fond-projet: #1c3444;
+
+    --fond-champ: #203847;
+
+    --texte-fonce: #132b3a;
+    --texte-clair: #f5f2e9;
+    --texte-secondaire: #c4cdd2;
+
+    --couleur-doree: #dfc795;
+    --bouton-survol: #efddb8;
+    --lien-survol: #ad884a;
+
+    --bordure-claire: #526571;
+    --bordure-foncee: #c8cbc5;
+}
+
+
+/* ==================================================
+   RÉGLAGES GÉNÉRAUX
+================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 110px;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fond-page);
+    color: var(--texte-fonce);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+a {
+    color: inherit;
+    text-underline-offset: 5px;
+}
+
+a:hover {
+    color: var(--lien-survol);
+}
+
+h1,
+h2 {
+    font-family: Georgia, serif;
+    letter-spacing: -2px;
+}
+
+h1 {
+    font-size: 110px;
+    line-height: 110px;
+    margin: 25px 0;
+}
+
+h2 {
+    font-size: 60px;
+    line-height: 65px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+.petit-titre {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.texte-section {
+    margin-bottom: 40px;
+}
+
+.numero {
+    display: block;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.bouton {
+    background-color: var(--couleur-doree);
+    color: var(--texte-fonce);
+    border: 1px solid var(--couleur-doree);
+    border-radius: 3px;
+    padding: 13px 22px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.bouton:hover {
+    background-color: var(--bouton-survol);
+    color: var(--texte-fonce);
+    border-color: var(--bouton-survol);
+}
+
+.bouton:focus {
+    box-shadow: none;
+}
+
+/* Mettre en évidence les liens et boutons utilisés au clavier */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--lien-survol);
+    outline-offset: 5px;
+}
+
+
+/* ==================================================
+   1. MENU DE NAVIGATION
+================================================== */
+
+.entete {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--fond-entete);
+    color: var(--texte-clair);
+    border-bottom: 1px solid var(--bordure-claire);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--couleur-doree);
+}
+
+.liens-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.liens-menu a {
+    color: var(--texte-clair);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.liens-menu a:hover {
+    color: var(--couleur-doree);
+}
+
+
+/* ==================================================
+   2. ACCUEIL ET IMAGE REPRÉSENTATIVE
+================================================== */
+
+#accueil {
+    background-color: var(--fond-accueil);
+    color: var(--texte-clair);
+    padding: 70px 0 30px;
+}
+
+#accueil h1 em {
+    color: var(--couleur-doree);
+}
+
+.phrase-accueil {
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.texte-accueil {
+    max-width: 480px;
+    color: var(--texte-secondaire);
+    margin: 25px 0 35px;
+}
+
+.liens-accueil {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.portrait {
+    margin: 0 0 0 30px;
+}
+
+.portrait img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 160px 160px 0 0;
+}
+
+.portrait figcaption {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--bordure-claire);
+    font-size: 12px;
+}
+
+.lien-parcours {
+    display: block;
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid var(--bordure-claire);
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+
+/* ==================================================
+   3. SECTION À PROPOS DE MOI
+================================================== */
+
+.photo-apropos {
+    width: 80%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.lien-cv {
+    font-weight: bold;
+}
+
+/*
+   La grille contient quatre colonnes de même largeur.
+
+   Chaque nom indique la place d'une case.
+   Le point représente un espace vide au centre.
+*/
+
+.parcours {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-template-areas:
+        "interets formation formation formation"
+        "interets . experiences experiences"
+        "competences competences experiences experiences";
+
+    gap: 18px;
+    margin-top: 60px;
+}
+
+.case-parcours {
+    padding: 28px;
+    border: 1px solid var(--bordure-foncee);
+}
+
+.case-parcours p:last-child {
+    margin-bottom: 0;
+}
+
+.case-parcours ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.case-parcours ul + p {
+    margin-top: 20px;
+}
+
+/* La case formation occupe la zone appelée formation */
+
+.formation {
+    grid-area: formation;
+    background-color: var(--fond-formation);
+}
+
+/* La case expériences occupe la zone appelée experiences */
+
+.experiences {
+    grid-area: experiences;
+    background-color: var(--fond-experiences);
+    color: var(--texte-clair);
+}
+
+/* La case compétences occupe la zone appelée competences */
+
+.competences {
+    grid-area: competences;
+    background-color: var(--fond-competences);
+}
+
+/* La case intérêts occupe la zone appelée interets */
+
+.interets {
+    grid-area: interets;
+    background-color: var(--fond-interets);
+}
+
+
+/* ==================================================
+   4. SECTION SERVICES
+================================================== */
+
+#services {
+    background-color: var(--fond-services);
+}
+
+.carte-service {
+    background-color: var(--fond-services);
+    border: 1px solid var(--bordure-foncee);
+    border-radius: 3px;
+}
+
+.carte-service .card-body {
+    padding: 30px;
+}
+
+.carte-service .card-text {
+    font-size: 15px;
+}
+
+.carte-service:hover {
+    border-color: var(--lien-survol);
+}
+
+
+/* ==================================================
+   5. SECTION PORTFOLIO
+================================================== */
+
+.carte-projet {
+    background-color: var(--fond-page);
+    border: 1px solid var(--bordure-foncee);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.image-projet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 220px;
+
+    background-color: var(--fond-projet);
+    color: var(--couleur-doree);
+
+    font-family: Georgia, serif;
+    font-size: 100px;
+}
+
+.carte-projet .card-body {
+    padding: 25px;
+}
+
+.carte-projet .petit-titre {
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.carte-projet .card-text {
+    font-size: 15px;
+}
+
+.lien-projet {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   6. SECTION CONTACT
+================================================== */
+
+#contact {
+    background-color: var(--fond-contact);
+    color: var(--texte-clair);
+}
+
+#contact h2 em {
+    color: var(--couleur-doree);
+}
+
+#contact a {
+    overflow-wrap: anywhere;
+}
+
+#contact iframe {
+    width: 100%;
+    height: 240px;
+    border: 0;
+    margin-top: 15px;
+}
+
+.form-label {
+    font-size: 14px;
+}
+
+.form-control {
+    background-color: var(--fond-champ);
+    color: var(--texte-clair);
+    border: 1px solid var(--bordure-claire);
+    border-radius: 3px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.form-control:focus {
+    background-color: var(--fond-champ);
+    color: var(--texte-clair);
+    border-color: var(--couleur-doree);
+    outline: 2px solid var(--couleur-doree);
+    box-shadow: none;
+}
+
+.texte-formulaire {
+    color: var(--texte-secondaire);
+    font-size: 13px;
+    line-height: 22px;
+}
+
+
+/* ==================================================
+   7. PIED DE PAGE
+================================================== */
+
+#pied {
+    background-color: var(--fond-pied);
+    color: var(--texte-clair);
+    padding: 25px 0;
+    font-size: 13px;
+}
+
+.contenu-pied {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contenu-pied p {
+    margin: 0;
+}
+
+
+/* ==================================================
+   AFFICHAGE SUR TABLETTE
+================================================== */
+
+@media (max-width: 991px) {
+
+    html {
+        scroll-padding-top: 150px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .liens-menu {
+        justify-content: center;
+        gap: 10px 20px;
+    }
+
+    h1 {
+        font-size: 85px;
+        line-height: 90px;
+    }
+
+    h2 {
+        font-size: 48px;
+        line-height: 54px;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .portrait {
+        max-width: 420px;
+        margin: 0;
+    }
+
+    .portrait img {
+        height: 420px;
+    }
+
+    .photo-apropos {
+        width: 180px;
+        height: 200px;
+    }
+
+    /* Deux cases par ligne sur tablette */
+
+    .parcours {
+        grid-template-columns: repeat(2, 1fr);
+
+        grid-template-areas:
+            "formation experiences"
+            "competences interets";
+    }
+}
+
+
+/* ==================================================
+   AFFICHAGE SUR TÉLÉPHONE
+================================================== */
+
+@media (max-width: 575px) {
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /*
+       Sur téléphone, le menu reste en haut de la page
+       mais défile avec elle pour laisser plus de place.
+    */
+
+    .entete {
+        position: static;
+    }
+
+    html {
+        scroll-padding-top: 20px;
+    }
+
+    .liens-menu {
+        gap: 8px 16px;
+    }
+
+    .liens-menu a {
+        font-size: 13px;
+    }
+
+    h1 {
+        font-size: 70px;
+        line-height: 75px;
+    }
+
+    h2 {
+        font-size: 40px;
+        line-height: 46px;
+    }
+
+    #accueil {
+        padding-top: 45px;
+    }
+
+    .portrait img {
+        height: 370px;
+    }
+
+    /* Une case par ligne sur téléphone */
+
+    .parcours {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+            "formation"
+            "experiences"
+            "competences"
+            "interets";
+    }
+
+    .case-parcours {
+        padding: 24px;
+    }
+}
